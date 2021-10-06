@@ -14,6 +14,7 @@ class UserManager(BaseUserManager):
 
         return user
 
+
 class User(AbstractBaseUser,PermissionsMixin):
     """Customs user Model that supports using email instead of username"""
     email = models.EmailField(max_length=255, unique=True)
