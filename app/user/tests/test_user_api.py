@@ -62,6 +62,7 @@ class PublicUserApiTests(TestCase):
         }
         create_user(**payload)
         res = self.client.post(TOKEN_URL, payload)
+
         self.assertIn('token', res.data)
         self.assertEqual(res.status_code, status.HTTP_200_OK)
 
@@ -73,7 +74,7 @@ class PublicUserApiTests(TestCase):
             'email': 'myemail@mycompany.com',
             'password': 'testfail'
         }
-        res = self.client.post(TOKEN_URL,payload)
+        res = self.client.post(TOKEN_URL, payload)
 
         self.assertNotIn('token', res.data)
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
