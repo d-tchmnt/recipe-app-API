@@ -18,8 +18,9 @@ class Migration(migrations.Migration):
                                         serialize=False, verbose_name='ID')),
                 ('password',
                  models.CharField(max_length=128, verbose_name='password')),
-                ('last_login', models.DateTimeField(blank=True, null=True,
-                                                    verbose_name='last login')),
+                ('last_login',
+                 models.DateTimeField(blank=True, null=True,
+                                      verbose_name='last login')),
                 ('is_superuser', models.BooleanField(default=False,
                                                      help_text='Designates '
                                                                'that this '
