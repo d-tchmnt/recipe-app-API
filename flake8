@@ -1,5 +1,6 @@
 [flake8]
 max-line-length = 160
+# noqa: F401
 exclude =
   migrations,
   __pycache__,
